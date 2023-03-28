@@ -1,0 +1,155 @@
+.header{
+    height: 5rem;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__logo{
+    width: 30%;
+    height: 24px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.logo__imagen{
+    width:24px;
+    height: 24px;
+}
+.logo__texto{
+    margin-left: .3rem;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 16px;
+    color: #464646;
+}
+
+
+.header__menu{
+    width: 65%;
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    align-items: center;
+
+}
+.menu__link{
+    color: #464646;
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 16px;
+    transition: .3s all ease;
+    text-decoration: none;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px;
+}
+.menu__link:hover{
+    animation-name: lineaAnimada;
+    animation-duration: 2s;
+    animation-iteration-count:infinite;
+}
+
+
+.menu__link--contacto{
+    color: #464646;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+
+}
+.menu__link--contacto:hover{
+    animation-name: lineaAnimada;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+
+
+@keyframes lineaAnimada {
+    0%{  
+        border-bottom:.5px solid #4ce5eb;
+    }
+    10%{  
+        border-right:1px solid #4ce5eb;
+    }
+    25%{  
+        border-top:1.5px solid #4ce5eb;
+    }
+    50%{  
+        border-left:1px solid #4ce5eb;
+    }
+    100%{  
+        border-bottom:.5px solid #4ce5eb;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------MEDIA*/
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .header{
+        justify-content: space-around;
+    }
+    .header__logo{
+        width: 30%;
+    }
+    .logo__imagen{
+        width: 20px;
+        height: 20px;
+    }
+    .logo__texto{
+        font-size: 16px;
+    }
+
+    .menu__link{
+        display: none;
+    }
+    .menu__link--contacto{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px){
+    .header__logo{
+        width: 70%;
+    }
+    .logo__texto{
+        font-size: 14px;
+    }
+    .logo__imagen{
+        width: 16px;
+        height: 16px;
+    }
+
+    .menu__link{
+        display: none;
+    }
+    .header__menu{
+        width: 30%;
+    }
+    .menu__link--contacto{
+        font-size: 12px;
+    }
+}
